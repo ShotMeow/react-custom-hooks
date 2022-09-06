@@ -1,7 +1,7 @@
 export const useScroll = () => {
-    const scrollRef = useRef<HTMLElement>(null)
+    const ref = useRef<HTMLElement>(null)
 
-    const { x, y } = scrollRef
+    const { x, y } = ref
 
-    return { x, y }
+    return { ref, x, y }
 }
