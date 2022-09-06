@@ -13,3 +13,20 @@
 **isShow** is the **boolean** value containing the display state of the **ref** element.
 
 **setIsShow()** is state change function.
+
+<h2>Example</h2>
+
+    const App = () => {
+        const {ref, isShow, setIsShow} = useOutside(false)
+    
+        return (
+            <main className={styles.container}>
+                <div ref={ref} className={styles.modal}>
+                    Inside of Modal...
+                </div>
+                <button onClick={() => setIsShow(!isShow)} className={styles.close}>
+                    Close
+                </button>
+            </main>
+        );
+    };
