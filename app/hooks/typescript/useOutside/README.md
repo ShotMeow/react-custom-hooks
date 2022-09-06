@@ -16,7 +16,7 @@
 
 <h2>Example</h2>
 
-    const App = () => {
+    const App: FC = () => {
         const {ref, isShow, setIsShow} = useOutside(false)
     
         return (
