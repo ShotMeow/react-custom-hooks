@@ -21,12 +21,15 @@
     
         return (
             <main className={styles.container}>
-                <div ref={ref} className={styles.modal}>
+                <button onClick={() => setIsShow(true)} className={styles.auth}>Login</button>
+                <div ref={ref} className={isShow ? styles.modal : styles.hidden}>
                     Inside of Modal...
+                    <button onClick={() => setIsShow(!isShow)} className={styles.close}>
+                        Close
+                    </button>
                 </div>
-                <button onClick={() => setIsShow(!isShow)} className={styles.close}>
-                    Close
-                </button>
             </main>
         );
     };
+    
+    export default App;
